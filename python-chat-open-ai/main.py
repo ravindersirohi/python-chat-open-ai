@@ -1,7 +1,7 @@
 
-import openai, asyncio, os, aiohttp
+# import openai, asyncio, os, aiohttp
 from fastapi import FastAPI
-from pydantic import BaseModel
+# from pydantic import BaseModel
 
 app = FastAPI()
 
