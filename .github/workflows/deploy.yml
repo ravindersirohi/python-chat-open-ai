@@ -57,4 +57,4 @@ jobs:
             --max-instances 2 \
             --concurrency 1 \
             --timeout 300 \
-            --update-env-vars "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}"
+            --update-env-vars OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }},GCP_PROJECT_ID=${{ secrets.GCP_PROJECT_ID }} 
