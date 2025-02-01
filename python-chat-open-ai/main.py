@@ -9,7 +9,7 @@ class UserInput(BaseModel):
     prompt: str
     response: str = None
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 async def chat_with_gpt(prompt):
     async with aiohttp.ClientSession() as session:
