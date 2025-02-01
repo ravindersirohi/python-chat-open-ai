@@ -35,7 +35,7 @@ def main():
     return "Fast API - with GPT-4 integration!"
 
 @app.post("/chat")
-async def chat(user_input:UserInput):
+async def chat_gpt(user_input:UserInput):
     try:
         user_input.response = await chat_with_gpt(user_input.prompt)
         return user_input
