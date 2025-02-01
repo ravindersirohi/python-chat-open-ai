@@ -43,6 +43,4 @@ async def chat(user_input:UserInput):
         error_message = str(e)
         return {"error": "Chat failed", "details": error_message}  
 
-if __name__ == "__main__":
-    asyncio.run(main())
 
