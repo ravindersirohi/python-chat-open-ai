@@ -12,7 +12,7 @@ jobs:
       GCP_LOCATION: "europe-west2"
       REPOSITORY_NAME: "sirohiapps"
       APP_NAME: "gcp-chat-gpt-fast-api"
-      WORKING_DIR: "python-chat-open-api"
+      WORKING_DIR: "python-chat-open-ai"
 
     steps:
       - name: Checkout code
