@@ -12,7 +12,7 @@ app = FastAPI()
 # openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 @app.get("/")
-def main():
+async def default():
     return "Fast API - with GPT-4 integration!"
 
 # async def chat_with_gpt(prompt):
