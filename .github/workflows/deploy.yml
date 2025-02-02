@@ -52,4 +52,5 @@ jobs:
             --image ${{ env.GCP_LOCATION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ env.REPOSITORY_NAME }}/${{ env.APP_NAME }}:$GITHUB_SHA \
             --region ${{ env.GCP_LOCATION }} \
             --platform managed \
-            --allow-unauthenticated
+            --allow-unauthenticated \
+            --update-env-vars OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
