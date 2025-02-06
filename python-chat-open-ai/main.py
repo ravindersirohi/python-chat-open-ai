@@ -2,12 +2,12 @@
 from fastapi import FastAPI
 # from pydantic import BaseModel
 # import openai
-import os
-import aiohttp
+# import os
+# import aiohttp
 
 app = FastAPI()
 
-OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
+# OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
 
 # Set your OpenAI API key
 # openai.api_key = OPENAI_API_KEY
