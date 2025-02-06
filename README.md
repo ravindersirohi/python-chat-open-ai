@@ -1,5 +1,5 @@
 # python-chat-open-ai
-Python Open AI
+Python Fast API integrated with Chat GPT-4.
 
 ## About
 Python Fast API running on [Google Cloud Run ](https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service) container app, and integrated with Chat GPT 4 via the [Open AI](https://platform.openai.com/docs/overview) API.
