@@ -6,14 +6,12 @@ import aiohttp
 
 app = FastAPI()
 
+# Set your OpenAI API key - Refer readme file.
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
-
-
-# Set your OpenAI API key
-# openai.api_key = OPENAI_API_KEY
 
 class Query(BaseModel):
     prompt: str
+    response: str = None
 
 @app.post("/generate")
 async def generate_text(query: Query):
@@ -30,7 +28,8 @@ async def generate_text(query: Query):
             }
         ) as response:
             data = await response.json()
-            return {"response": data['choices'][0]['message']['content'].strip()}
+            query.response = data['choices'][0]['message']['content'].strip('\n').strip()
+            return query
 
 @app.get("/")
 async def read_root():
