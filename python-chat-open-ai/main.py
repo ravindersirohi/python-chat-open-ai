@@ -36,6 +36,9 @@ async def generate_text(query: Query):
 async def read_root():
     return {"message": "Welcome to the FastAPI and OpenAI Integration!"}
 
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=int(os.getenv("PORT", 8080)))
+
 # @app.get("/")
 # async def default():
 #     return "Fast API - with GPT-4 integration!"
