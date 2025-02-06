@@ -1,8 +1,7 @@
 
 from fastapi import FastAPI
 from pydantic import BaseModel
-import os
-import aiohttp
+import os, aiohttp
 
 app = FastAPI()
 
@@ -13,7 +12,7 @@ class Query(BaseModel):
     prompt: str
     response: str = None
 
-@app.post("/generate")
+@app.post("/chat")
 async def generate_text(query: Query):
     async with aiohttp.ClientSession() as session:
         async with session.post(
